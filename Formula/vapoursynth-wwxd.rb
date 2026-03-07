@@ -6,6 +6,12 @@ class VapoursynthWwxd < Formula
   license ""
   head "https://github.com/dubhater/vapoursynth-wwxd.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-wwxd-1.0"
+    sha256 cellar: :any,                 arm64_tahoe:  "379c537bac0dadbecf3b8657e9c13509982d35887d820910db72f776c20cd47a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8baadb0160a6a95feb27213282503d3587b31f7b901087c582d8ed9e3e1f65f8"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "vapoursynth"
 
