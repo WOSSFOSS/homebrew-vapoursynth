@@ -16,10 +16,13 @@ class Akarin < Formula
   depends_on "pkgconf" => :build
   depends_on "llvm@15"
   depends_on "vapoursynth"
-  depends_on "zlib-ng-compat"
   depends_on "zstd"
 
   uses_from_macos "ncurses"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
