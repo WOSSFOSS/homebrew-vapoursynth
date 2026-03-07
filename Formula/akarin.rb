@@ -6,6 +6,11 @@ class Akarin < Formula
   license "LGPL-3.0-only"
   head "https://github.com/AkarinVS/vapoursynth-plugin.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/akarin-0.96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0142c9591681a766c69ad1e6dacd07ff7bf79f377379e2b9188d5473e2d25909"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
