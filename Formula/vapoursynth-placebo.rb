@@ -21,6 +21,7 @@ class VapoursynthPlacebo < Formula
   depends_on "dovi_tool"
   depends_on "libplacebo"
   depends_on "vapoursynth"
+  depends_on "vulkan-tools"
 
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
