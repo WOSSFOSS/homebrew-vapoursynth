@@ -21,5 +21,5 @@ jobs:
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         issue_number: prNumber,
-                        labels: ['ci-passed']
+                        labels: ['pr-pull']
                       });
