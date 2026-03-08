@@ -7,6 +7,14 @@ class VapoursynthPlacebo < Formula
   license "LGPL-2.1-only"
   head "https://github.com/sgt0/vs-placebo.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-placebo-3.3.1"
+    sha256 cellar: :any, arm64_tahoe:   "d8e3ddf1987bfac801610f01147c93fcf4125c5d1d2c9ff48168ad77a4a7830d"
+    sha256 cellar: :any, arm64_sequoia: "cb77bb162a5fd0672de0498fd9a5bd86e3d0c20cfbbf5f2038306d63d872eec5"
+    sha256 cellar: :any, arm64_sonoma:  "1ca7feca10130c4e0f1aca1819b9abe29267e8c2b6118f343cef2ad429ffe76a"
+    sha256               x86_64_linux:  "05c179379a43d4ffd1772fdda49337ba6b6ce88263612aeca6084845249916da"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
