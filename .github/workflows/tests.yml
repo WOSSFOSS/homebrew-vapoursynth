@@ -13,7 +13,6 @@ jobs:
         os: 
           - ubuntu-22.04
           - macos-14
-          - macos-14-intel
           - macos-15
           - macos-15-intel
           - macos-26
