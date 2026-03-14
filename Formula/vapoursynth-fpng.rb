@@ -6,6 +6,14 @@ class VapoursynthFpng < Formula
   license "LGPL-2.1-or-later"
   head "https://github.com/Mikewando/vsfpng.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-fpng-1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bb44766db5db9b01f054918add1abeda2c81947c6bd0b353fe6fe00c255fdaf0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e1be95e63390881bf310a9c9ed4c1ecada673b0f98a676bc1955844da5a3ad52"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "99b7c1e97840e58a74a5223d212f04d2bde768d75adb9afebc7ef684d1669107"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a41cfdc636bca24018d3f0cc017ce91e2aee587a90c3a822621b8fece9d53cbb"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
