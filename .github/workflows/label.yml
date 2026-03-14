@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Print the JSON data
-              run: jq << "${{ toJSON(github) }}"
+              run: echo "${{ toJSON(github) }}" | jq
     on-success:
         runs-on: ubuntu-latest
         # Check for success AND that the PR author matches your username
