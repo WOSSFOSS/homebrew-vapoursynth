@@ -1,7 +1,7 @@
 name: Label PR on Success (Owner Only)
 on:
     workflow_run:
-        workflows: ["CI"]
+        workflows: ["brew test-bot"]
         types:
             - completed
 
