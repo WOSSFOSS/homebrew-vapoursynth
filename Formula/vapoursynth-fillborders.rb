@@ -5,6 +5,14 @@ class VapoursynthFillborders < Formula
   sha256 "935eb2a243f2a83ef0f1fe0ddc8cb1e16c81e99ccf5b690d089487a46a9c1c4d"
   license ""
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-fillborders-2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "77e2ab2bfa4611bee03ed2fad12608150785b9995263489147321f65f9cf8eb2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f4b20ce2abcadce231ca60fbd5e7a07080ef384dfd770114c804c90dcb3bd0a7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2da5af497ce4c0100c9d0c416f4acc3369feda1140900560c6f8e9d952cf81ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee57a13454ea9f9f363d8a2e385fbfe1517f75ee9367bb90e464b70a759d4bcb"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
