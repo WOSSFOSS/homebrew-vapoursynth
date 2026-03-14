@@ -6,6 +6,14 @@ class VapoursynthBilateral < Formula
   license "GPL-3.0-only"
   head "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-bilateral-3"
+    sha256 cellar: :any,                 arm64_tahoe:   "11c7b50b2395657a472985bb3e36dbfe96abe4914b99719f8faf6f72536df5af"
+    sha256 cellar: :any,                 arm64_sequoia: "6f86cf243ecf63bc4a20d5fd5d75376f75b5c7d4c445c63d9d2075a8520c6b06"
+    sha256 cellar: :any,                 arm64_sonoma:  "90aea768ddd68e79b64fc83e1120a62605cb820e8cf5d18e6e4c167d09c1f198"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05348805648979b832c9bbb1d03cf135c926bd80cd74994c67580a4f5c8f6185"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "vapoursynth"
 
