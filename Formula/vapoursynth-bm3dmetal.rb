@@ -7,9 +7,8 @@ class VapoursynthBm3dmetal < Formula
   head "https://github.com/Sunflower-Dolls/Vapoursynth-BM3DMETAL.git", branch: "main"
 
   depends_on "cmake" => :build
-  depends_on "llvm@17" => :build
   depends_on "x265" => :test
-  depends_on macos: :ventura
+  depends_on macos: :sequoia # Dependency on Clang 17+
   depends_on "vapoursynth" # Mac only due to Metal dependency
 
   def install
