@@ -6,6 +6,14 @@ class VapoursynthAddgrain < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-addgrain-10"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0196480692d94d4102ba0dc995ae41a5b6f1576842f5832eb21f1cc7bd99cebc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a28652d6b51db2c446294d4916b8090ea81f2ae28ea513e328bdf09a8a2019dd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "59a0d14e4583a752ba127fcb076737f51b7117dd3e1ce5404d815d7a4af47ae0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9640c8f1b2230b3915a7ea9f4cd85f3c6b197e5dda16f9059c1bdf1642da01f6"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
