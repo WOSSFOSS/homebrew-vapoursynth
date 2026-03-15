@@ -19,6 +19,14 @@ class Vivtc < Formula
     end
   end
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vivtc-1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e59df1cc6eaacb9cbd7b861e7c1a5271e47828ab1ecf82b119a3a11f1c7c59cd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a60d0c63dd47e67c93d7e8943b21105d702f1e491b22b24999496593a3459b0b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "93a27b8e9a70718aeeb615417e16c65688fa486eb289a492b1197db7b0bc1782"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dde097f56a36799c6d0a0ffd38a1cc758406397c065a6c60999cc470a3fddd7b"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
