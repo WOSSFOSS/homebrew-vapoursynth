@@ -8,6 +8,14 @@ class AwsmfuncFull < Formula
   license "MIT"
   head "https://github.com/OpusGang/awsmfunc.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/awsmfunc-full-1.3.5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "15f99df43d6143a09696b3189c0da2697d4da80f47cbe285e508d5385bef6d46"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43059449f5f12590e313281ecc3f65c568bfe1fbb0f455fa0b56718e5af9f4c8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fa69fdb0b16445d84c8ea4592728885b02e501127a323bde69ad1b5253729674"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c3e093cbc793073e49f0651e55b93f859fd050f909f927aae048b26f1eff3eb3"
+  end
+
   depends_on "x265" => :test
   depends_on "numpy"
   depends_on "python@3.14"
