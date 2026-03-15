@@ -8,10 +8,11 @@ class VapoursynthZip < Formula
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-zip-13"
-    sha256 cellar: :any,                 arm64_tahoe:   "c97ff244ff096b9a9cd1a513d83f42d2fe99bed060b5689f4ec1cac22e3e94d5"
-    sha256 cellar: :any,                 arm64_sequoia: "a41ee1e1d8e2cb27ec7e9ea6770fa9ea5de9ba6b80ccc90b68619458b8dc7158"
-    sha256 cellar: :any,                 arm64_sonoma:  "f589de1b2c35da49fefeeff766dc46769204418bc78eb4ec59fd1bd49fda5d2c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2104cacda12aee1fb83f8e8d52ec1a216286772dedc370a647cf462cca9749fc"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "419d6d8a2ca3979af7ca36fde32c48bd3f63cfa1176a4a12ae94d170872fc340"
+    sha256 cellar: :any,                 arm64_sequoia: "c53c5e2f92e513a4e3fee38cb9e79cbe176cc319698413470e9bf3e991276afc"
+    sha256 cellar: :any,                 arm64_sonoma:  "e002f6e6aca7658ae3005692978a5f59d633202a279521babd44c5f6f9bb1d53"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "956b676c966437bd084e9462c5d4a5cce1cfc17308ed6574b2b3694c120a8a16"
   end
 
   depends_on "zig" => :build
