@@ -8,10 +8,11 @@ class VapoursynthFillborders < Formula
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-fillborders-2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "77e2ab2bfa4611bee03ed2fad12608150785b9995263489147321f65f9cf8eb2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f4b20ce2abcadce231ca60fbd5e7a07080ef384dfd770114c804c90dcb3bd0a7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2da5af497ce4c0100c9d0c416f4acc3369feda1140900560c6f8e9d952cf81ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee57a13454ea9f9f363d8a2e385fbfe1517f75ee9367bb90e464b70a759d4bcb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "792341e4f6ef7316110754e3186867a7f5c7025bb75e1204c20209e4e742b321"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5f2ecd378b141c1813d0beb84b935a4eabd2db0bbb938940944068e47a393de2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b6338bfc63fbfda2bd90b3a57130fcf141e188b6f463e88052aba786d23ac88c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8b6fe422b4b994e7e80b1338f07da706e92b5d58680cb0e79ba88abbd86311d"
   end
 
   depends_on "meson" => :build
