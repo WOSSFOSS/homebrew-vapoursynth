@@ -1,9 +1,10 @@
 class VapoursynthZip < Formula
-  desc "VapourSynth Zig Image Process️"
+  desc "VapourSynth Zig Image Processing Plugin"
   homepage "https://github.com/dnjulek/vapoursynth-zip"
   url "https://github.com/dnjulek/vapoursynth-zip/archive/refs/tags/R13.tar.gz"
   sha256 "d8916f1d04fae4123a48c53e37b15ca015cb4a8a4f6e43e75c870ac2524dd0e0"
   license "MIT"
+  head "https://github.com/dnjulek/vapoursynth-zip.git", branch: "master"
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-zip-13"

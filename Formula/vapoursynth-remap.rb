@@ -4,6 +4,7 @@ class VapoursynthRemap < Formula
   url "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames/archive/refs/tags/v1.1.tar.gz"
   sha256 "1de7955c3eca3c502a97a322b309c245d474c154a71bd9a30a7676b531a2416d"
   license "BSD-2-Clause"
+  head "https://github.com/Irrational-Encoding-Wizardry/Vapoursynth-RemapFrames.git", branch: "master"
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-remap-1.1"

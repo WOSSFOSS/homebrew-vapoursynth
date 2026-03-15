@@ -3,7 +3,7 @@ class VapoursynthWwxd < Formula
   homepage "https://github.com/dubhater/vapoursynth-wwxd"
   url "https://github.com/dubhater/vapoursynth-wwxd/archive/refs/tags/v1.0.tar.gz"
   sha256 "29da62c3cde87bd4ebb7ceaf7ad8344834412fcdddbc9d115ed62f478c42e874"
-  license ""
+  license "GPL-2.0-only"
   head "https://github.com/dubhater/vapoursynth-wwxd.git", branch: "master"
 
   bottle do
