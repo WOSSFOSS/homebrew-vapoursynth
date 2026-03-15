@@ -20,7 +20,6 @@ class AwsmfuncFull < Formula
   depends_on "vapoursynth-fpng"
   depends_on "x265" => :test
 
-
   pypi_packages exclude_packages: %w[numpy vapoursynth]
 
   resource "vs-rekt" do
