@@ -1,24 +1,24 @@
 class AwsmfuncFull < Formula
   include Language::Python::Virtualenv
 
-  desc "awesome VapourSynth functions"
+  desc "Awesome VapourSynth functions"
   homepage "https://github.com/OpusGang/awsmfunc"
   url "https://github.com/OpusGang/awsmfunc/archive/refs/tags/1.3.5.tar.gz"
   sha256 "ce6cfe7c366171ced3b6d5f6675444d267909ce54da3e43b5a337d21f8f6cd96"
   license "MIT"
   head "https://github.com/OpusGang/awsmfunc.git", branch: "master"
 
+  depends_on "x265" => :test
+  depends_on "numpy"
   depends_on "python@3.14"
   depends_on "vapoursynth"
-  depends_on "numpy"
-  depends_on "vapoursynth-sub"
-  depends_on "vapoursynth-remap"
-  depends_on "vapoursynth-fillborders"
-  depends_on "vapoursynth-placebo"
-  depends_on "vapoursynth-descale"
   depends_on "vapoursynth-bilateral"
+  depends_on "vapoursynth-descale"
+  depends_on "vapoursynth-fillborders"
   depends_on "vapoursynth-fpng"
-  depends_on "x265" => :test
+  depends_on "vapoursynth-placebo"
+  depends_on "vapoursynth-remap"
+  depends_on "vapoursynth-sub"
 
   pypi_packages exclude_packages: %w[numpy vapoursynth]
 
@@ -46,7 +46,9 @@ class AwsmfuncFull < Formula
       info = FrameInfo(clip)
       info.output(sys.stdin)
     PYTHON
-    call = "#{python} #{testpath}/test.py | #{Formula["x265"].opt_bin}/x265 - --input-res 1920x1080 --fps 24 --output #{testpath}/test.hevc"
+    python_call = "#{python} #{testpath}/test.py"
+    x265_call = "#{Formula["x265"].opt_bin}/x265 - --input-res 1920x1080 --fps 24 --output #{testpath}/test.hevc"
+    call = "#{python_call} | #{x265_call}"
     system "sh", "-c", call
     assert_path_exists testpath/"test.hevc"
   end
