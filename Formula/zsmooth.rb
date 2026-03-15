@@ -6,6 +6,14 @@ class Zsmooth < Formula
   license "MIT"
   head "https://github.com/adworacz/zsmooth.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/zsmooth-0.15"
+    sha256 cellar: :any,                 arm64_tahoe:   "01c26c3c0767ca71a067c7abd7f8ce6a233100167b043858c08415ae63b2f95f"
+    sha256 cellar: :any,                 arm64_sequoia: "08cd9f26de61738c71a07317716bee1f35e226d5f5dea4f5a0dedd8615a825b7"
+    sha256 cellar: :any,                 arm64_sonoma:  "3ca14df121088fc8718d2c9cc3883871fb9b8a0dd51c0c564218ffeb3fa0c964"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "160d3b5c4a27921a168f4a2689d8a6ed5b5ebc640a73a5a7ca31969fce338ff2"
+  end
+
   depends_on "zig" => :build
   depends_on "x265" => :test
   depends_on "vapoursynth"
