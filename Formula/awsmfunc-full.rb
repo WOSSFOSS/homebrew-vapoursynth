@@ -20,8 +20,6 @@ class AwsmfuncFull < Formula
   depends_on "vapoursynth-fpng"
   depends_on "x265" => :test
 
-  conflicts_with "awsmfunc", because: "both install the same Python module"
-
 
   pypi_packages exclude_packages: %w[numpy vapoursynth]
 
