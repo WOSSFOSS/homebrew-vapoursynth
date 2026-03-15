@@ -7,11 +7,17 @@ class VapoursynthBm3dmetal < Formula
   head "https://github.com/Sunflower-Dolls/Vapoursynth-BM3DMETAL.git", branch: "main"
 
   depends_on "cmake" => :build
-  depends_on "x265" => :test
-  depends_on macos: :sequoia # Dependency on Clang 17+
+  depends_on "llvm@20" => :build
+  depends_on "x265" => :test # for clang++-17
+  depends_on :macos
+  depends_on macos: :monterey
   depends_on "vapoursynth" # Mac only due to Metal dependency
 
   def install
+    ENV["CXX"] = Formula["llvm@20"].opt_bin/"clang++"
+    ENV["CC"] = Formula["llvm@20"].opt_bin/"clang-20"
+    ENV["OBJCXX"] = Formula["llvm@20"].opt_bin/"clang++"
+    ENV["OBJC"] = Formula["llvm@20"].opt_bin/"clang-20"
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
 "-DVAPOURSYNTH_INCLUDE_DIRECTORY=#{Formula["vapoursynth"].opt_include}/vapoursynth"
     system "cmake", "--build", "build"
