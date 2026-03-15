@@ -6,6 +6,13 @@ class VapoursynthBm3dmetal < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/Sunflower-Dolls/Vapoursynth-BM3DMETAL.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-bm3dmetal-2"
+    sha256 cellar: :any, arm64_tahoe:   "3f849d4b7f31ec7b61afe758ece12d3e234021b54bd2566fe328f49c166528fe"
+    sha256 cellar: :any, arm64_sequoia: "4d56204a09027ffe8e20ee6bdd98e07a8d42b531d919a353491bc4a97de6c68c"
+    sha256 cellar: :any, arm64_sonoma:  "21ea35833443e4c9cef0497a9a3be1d1de4f41d835700e6614c62a14450a45d4"
+  end
+
   depends_on "cmake" => :build
   depends_on "llvm@20" => :build
   depends_on "x265" => :test # for clang++-17
