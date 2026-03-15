@@ -17,6 +17,7 @@ class VapoursynthFpng < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
+  depends_on "x265" => :test
   depends_on "vapoursynth"
 
   patch do
@@ -40,6 +41,18 @@ class VapoursynthFpng < Formula
                                    .find { |d| d.name.match?(/^python@\d\.\d+$/) }
                                    .to_formula
                                    .opt_libexec/"bin/python"
-    system python, "-c", "from vapoursynth import core; core.fpng"
+    (testpath/"test.py").write <<~PYTHON
+      from vapoursynth import core
+      import sys
+      clip = core.std.BlankClip(length=5, width=1920, height=1080, fpsnum=24, fpsden=1)
+      clip = core.fpng.Write(clip, "test%04d.png")
+      with open("/dev/null", "wb") as f:
+        clip.output(f)
+    PYTHON
+    python_call = "#{python} test.py"
+    system "sh", "-c", python_call.to_s
+    (0..4).each do |i|
+      assert_path_exists testpath/"test000#{i}.png"
+    end
   end
 end

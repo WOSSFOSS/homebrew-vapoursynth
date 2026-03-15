@@ -41,12 +41,13 @@ class VapoursynthAddgrain < Formula
       from vapoursynth import core
       import sys
       clip = core.std.BlankClip(length=5, width=1920, height=1080, fpsnum=24, fpsden=1)
-      grained = core.grain.Add(clip)
-      info.output(sys.stdin)
+      clip = core.grain.Add(clip)
+      clip.output(sys.stdout)
     PYTHON
     python_call = "#{python} test.py"
     x265_call = "#{Formula["x265"].opt_bin}/x265 - --input-res 1920x1080 --fps 24 --output test.hevc"
     call = "#{python_call} | #{x265_call}"
+    system "sh", "-c", "#{python_call} > /dev/null"
     system "sh", "-c", call
     assert_path_exists testpath/"test.hevc"
   end
