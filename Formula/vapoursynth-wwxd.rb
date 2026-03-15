@@ -8,11 +8,11 @@ class VapoursynthWwxd < Formula
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-wwxd-1.0"
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "204e6d0625ac63991fee56563e7169146648abe6dbd0647aa8dec8615ea67406"
-    sha256 cellar: :any,                 arm64_sequoia: "8e3c9c4490959b0bed570ff2ee2322285115683ee546970c009831294d13fbed"
-    sha256 cellar: :any,                 arm64_sonoma:  "4232519be71468c73d793758d0b87a1f0ae6328415a88bc99333f1dbada834ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d1c907548fdba61938eaeca6fd94f12e0ca80b4c034afa355e4b3749dca72dcb"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_tahoe:   "8c6d13c5dfe585dd08fbe73b29d99d841aaa9dc6494b33eb423084afdb37e769"
+    sha256 cellar: :any,                 arm64_sequoia: "dbf451e0a78b29a20526909b3eeb1f56ddea7aafc6b0cf31991dc57593cfbc00"
+    sha256 cellar: :any,                 arm64_sonoma:  "d5fdc8acbfd32c088a6ebecb7490a3e9080c3df644bebab0fb1248f2dc1412c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5540a084b7a5448e7bb1fa5cb5611075919d71f2cc3ff506a763093b0e1f6374"
   end
 
   depends_on "pkgconf" => :build
