@@ -5,6 +5,14 @@ class VapoursynthResize2 < Formula
   sha256 "3e82cbbd290dca49b6faf39b641629ac7f5ccec47edfb35570926e843971086d"
   license "LGPL-2.1-or-later"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-resize2-0.3.4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f77fc991dc929020dc0433c15cf592101b8dc426cc42f2a9d8e3fa878a193f57"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf8af7589459d9b22893bb6c0a5c9b533852c803704a904d491f1b9dca37e231"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6410112b86799fb113539fba1613bd729b14d804aa8853a822c1b9c777cdb0bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e1793a621573826fdd08c3da3e825a5164b159eced98ce362d49879329c13b4"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
