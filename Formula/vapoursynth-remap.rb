@@ -8,10 +8,11 @@ class VapoursynthRemap < Formula
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-remap-1.1"
-    sha256 cellar: :any, arm64_tahoe:   "93e3a03e60bed0b0dfe080b468afabd2b08bf29780bb74d3ff4e36780f60634b"
-    sha256 cellar: :any, arm64_sequoia: "94d25e151fd1d923f5c2c3a6f75c02dcfa6b38f7c1af7a03b96c1574b4e2dee5"
-    sha256 cellar: :any, arm64_sonoma:  "4561ec1165ab4ad5f623d5f5cabf8ace122d159be4023e6e31ab2166e537fc47"
-    sha256               x86_64_linux:  "e1a87924468d70ee060cdcf4a24377d6f95a67226a323c85673e0df733fe122b"
+    rebuild 1
+    sha256 cellar: :any, arm64_tahoe:   "8646842f81c35ccd29c8fafee26b59073519f87962104035910602b1a3fba2c4"
+    sha256 cellar: :any, arm64_sequoia: "109fb33d82532865edc6f5a49006eee66c7db5f01c4157c772e165488579c534"
+    sha256 cellar: :any, arm64_sonoma:  "f384cfd73dd04b5ec3e35242581b8d0121cd8ea847176d5aa3e5b3b5c73f5f88"
+    sha256               x86_64_linux:  "3b3fb926c29b2001fb70503daee069b41c8e15fb228801beb98ce7ca5ae2db77"
   end
 
   depends_on "meson" => :build
