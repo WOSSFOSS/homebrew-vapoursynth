@@ -16,9 +16,6 @@ class Awsmfunc < Formula
   depends_on "vapoursynth-fillborders"
   depends_on "x265" => :test
 
-  conflicts_with "awsmfunc-full", because: "both install the same Python module"
-
-
   pypi_packages exclude_packages: %w[numpy vapoursynth]
 
   resource "vs-rekt" do
