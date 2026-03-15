@@ -27,6 +27,18 @@ class Akarin < Formula
     depends_on "zlib-ng-compat"
   end
 
+  def install
+    # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
+    # prefix, but we want it in a Cellar location instead.
+    inreplace "meson.build",
+              "install_dir: join_paths(vapoursynth_dep.get_pkgconfig_variable('libdir'), 'vapoursynth'),",
+              "install_dir: '#{lib}/vapoursynth',"
+
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
+  end
+
   test do
     python = Formula["vapoursynth"].deps
                                    .find { |d| d.name.match?(/^python@\d\.\d+$/) }
