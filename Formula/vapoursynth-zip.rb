@@ -1,13 +1,13 @@
 class VapoursynthZip < Formula
-  desc "VapourSynth Zig Image Process ⚡🎞️"
+  desc "VapourSynth Zig Image Process️"
   homepage "https://github.com/dnjulek/vapoursynth-zip"
   url "https://github.com/dnjulek/vapoursynth-zip/archive/refs/tags/R13.tar.gz"
   sha256 "d8916f1d04fae4123a48c53e37b15ca015cb4a8a4f6e43e75c870ac2524dd0e0"
   license "MIT"
 
   depends_on "zig" => :build
-  depends_on "vapoursynth"
   depends_on "x265" => :test
+  depends_on "vapoursynth"
 
   def install
     system "zig", "build", *std_zig_args
