@@ -8,9 +8,9 @@ class Akarin < Formula
 
   bottle do
     root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/akarin-0.96"
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma: "924ab0e97428b3db85ca02e1c1f56ffbba597c45e84661cb5631e5a363e03714"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "104376abc4fc1bfc6e0375fe1910b09d7540363bd37eab08fe2743ca55ed216a"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sonoma: "7675167279db8c836d20ce6def5776c1eb73dc70f3c0679662b363b2912dd6dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e22495c52ef424d9064baec28389f03aae00e9604bf57ad65c961e90d4f6d661"
   end
 
   depends_on "meson" => :build
