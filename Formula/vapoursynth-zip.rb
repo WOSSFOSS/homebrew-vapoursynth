@@ -10,7 +10,18 @@ class VapoursynthZip < Formula
   depends_on "vapoursynth"
 
   def install
+    extension_name = shared_library("libvszip")
+    if OS.mac?
+      max_install_size_pre = <<~ZIG
+        if (target.result.os.tag == .macos) {
+          lib.headerpad_max_install_names = true;
+        }
+      ZIG
+      install_command = "    b.installArtifact(lib);"
+      inreplace "build.zig", install_command, max_install_size_pre + install_command
+    end
     system "zig", "build", *std_zig_args
+    (lib/"vapoursynth").install_symlink lib/extension_name
   end
 
   test do
