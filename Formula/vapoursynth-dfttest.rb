@@ -6,6 +6,14 @@ class VapoursynthDfttest < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-dfttest-7"
+    sha256 cellar: :any, arm64_tahoe:   "c16fb0e062ebbb4984bff69c1f1c567b9e6f1057ca7047e82dfaf0da391b129c"
+    sha256 cellar: :any, arm64_sequoia: "4688edc369238b3e06eee30bc062824ed65ec2a853b8f3a1d864b7e86a7cf8f0"
+    sha256 cellar: :any, arm64_sonoma:  "ae15ef819634b6991afa22d751b6a5fece5a0310a75659a919185762bd5af353"
+    sha256               x86_64_linux:  "010966feaeae9ca9ee34d6cfa4be9f042ceb0731e67e968b7a860dc7ba23ea91"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
