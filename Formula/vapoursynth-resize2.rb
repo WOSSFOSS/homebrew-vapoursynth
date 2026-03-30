@@ -6,11 +6,11 @@ class VapoursynthResize2 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-resize2-0.3.4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f77fc991dc929020dc0433c15cf592101b8dc426cc42f2a9d8e3fa878a193f57"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf8af7589459d9b22893bb6c0a5c9b533852c803704a904d491f1b9dca37e231"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6410112b86799fb113539fba1613bd729b14d804aa8853a822c1b9c777cdb0bd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0e1793a621573826fdd08c3da3e825a5164b159eced98ce362d49879329c13b4"
+    root_url "https://github.com/WOSSFOSS/homebrew-vapoursynth/releases/download/vapoursynth-resize2-0.4.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f6046a0e628e12b4bb5e3dd482bbbf1514d92addcbad3b7024036c5a49162d4f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "02cd570b289248a51ae7ac697a0a0bf22ceb2a977d52547942cfe90983fd6288"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "38375462b85f089c9d900c6635e4fe427d146a6af48360f776d43c4d4496f3e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a09fb247797794c561af51143e94a0a772ac9383af99557b5ebb50ded797ca2a"
   end
 
   depends_on "meson" => :build
