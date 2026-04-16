@@ -1,8 +1,8 @@
 class VapoursynthFillborders < Formula
   desc "Fills the borders of a clip"
   homepage "https://github.com/dubhater/vapoursynth-fillborders"
-  url "https://github.com/dubhater/vapoursynth-fillborders/archive/refs/tags/v2.tar.gz"
-  sha256 "935eb2a243f2a83ef0f1fe0ddc8cb1e16c81e99ccf5b690d089487a46a9c1c4d"
+  url "https://github.com/dubhater/vapoursynth-fillborders/archive/refs/tags/v3.tar.gz"
+  sha256 "f95b663256435b5f90260329f1c379ae31582b535baf2c350f862f8e4665210c"
   license "WTFPL"
   head "https://github.com/dubhater/vapoursynth-fillborders.git", branch: "master"
 
