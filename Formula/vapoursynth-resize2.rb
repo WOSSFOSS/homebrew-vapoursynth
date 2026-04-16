@@ -1,8 +1,8 @@
 class VapoursynthResize2 < Formula
   desc "Enhanced zimg resizer with custom kernel, blur, and force-resize support"
   homepage "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2"
-  url "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2/archive/refs/tags/0.4.0.tar.gz"
-  sha256 "2a3629f19c59351544b7a5a8c3f93cc04b60efea45d37347534452e66adfa067"
+  url "https://github.com/Jaded-Encoding-Thaumaturgy/vapoursynth-resize2/archive/refs/tags/0.4.2.tar.gz"
+  sha256 "40d0feb0845b97eefb7eb1b20784bf641a72b15d5191dd19b26077344b44ea23"
   license "LGPL-2.1-or-later"
 
   bottle do
