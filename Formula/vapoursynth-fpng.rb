@@ -20,11 +20,6 @@ class VapoursynthFpng < Formula
   depends_on "x265" => :test
   depends_on "vapoursynth"
 
-  patch do
-    url "https://github.com/Mikewando/vsfpng/commit/d2c59bb4e4949a1b747d21f76494705c315b382a.patch?full_index=1"
-    sha256 "1eedd931987830a461ade72b54adb24b1895c5b0300f3676b8e7b6c7a7a2f572"
-  end
-
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
     # prefix, but we want it in a Cellar location instead.
