@@ -1,8 +1,8 @@
 class VapoursynthFpng < Formula
   desc "Fpng for VapourSynth"
   homepage "https://github.com/Mikewando/vsfpng"
-  url "https://github.com/Mikewando/vsfpng/archive/refs/tags/1.0.tar.gz"
-  sha256 "f982325f7e0b45dc9d21d54c58981db4e9bc9fea775f4b3158fcf138142327a7"
+  url "https://github.com/Mikewando/vsfpng/archive/refs/tags/1.2.tar.gz"
+  sha256 "473c29209fda4731f515632d0376081cfb7f315ce26464705fcf693da853e23e"
   license "LGPL-2.1-or-later"
   head "https://github.com/Mikewando/vsfpng.git", branch: "master"
 
